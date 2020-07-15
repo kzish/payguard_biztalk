@@ -1,0 +1,265 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="20a04d5d-e322-413d-b492-eea14a04c75e" LowerBound="1.1" HigherBound="53.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PayGuard" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="724b5c04-7906-4f3e-831c-3add90bd6eef" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_bulk_payment_in" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="4e68321c-d6b6-434b-b4ff-3b83f9c2f2e8" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="b4259074-7181-4558-b05f-d2994535cf03" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="PayGuard.Schemas.bulk_payment_in" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="0ba5520c-0807-4bb9-9c84-243b21845eec" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_bulk_payment_out" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="652860fd-c7b2-4b75-a1b7-0f7ce916cf6e" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="e22bc1d1-22d4-427c-b2ef-4b0aacbd349e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.37">
+                    <om:Property Name="Ref" Value="PayGuard.Schemas.bulk_payment_out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="2121b02b-8067-41ef-91da-6cae69096c8a" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="bulk_payment_out_ftp_port_" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="bed14906-e8db-4404-ab20-568854573cbd" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="9a321863-c515-4dad-a080-fb4a3cd049c0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.37">
+                    <om:Property Name="Ref" Value="PayGuard.Schemas.bulk_payment_out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="89d8148f-c40b-40df-a185-394b71247327" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="52.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="bulk_payment_orchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="66682c72-604c-4d37-a4a9-4bfd5f54aaa9" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="df7584fa-0c79-461e-9b07-7c14f3d1e0f3" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="bulk_payment_in_port" />
+                    <om:Property Name="MessageName" Value="bulk_payment_in_message" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="ff83a799-a180-44a1-a849-0decb6ca6ae3" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="46.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Transform" OID="09a447a0-784e-4fef-8ccf-b64463faafba" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="45.1">
+                        <om:Property Name="ClassName" Value="PayGuard.Maps.bulk_payment_map" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="523e2a3b-07d5-4516-b0ed-5749395f4664" ParentLink="Transform_InputMessagePartRef" LowerBound="44.88" HigherBound="44.111">
+                            <om:Property Name="MessageRef" Value="bulk_payment_in_message" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="bd570855-6a16-490a-9625-8b8d24b944b8" ParentLink="Transform_OutputMessagePartRef" LowerBound="44.28" HigherBound="44.52">
+                            <om:Property Name="MessageRef" Value="bulk_payment_out_message" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="f27f8346-3e87-4171-836b-5df7f63a1ef4" ParentLink="Construct_MessageRef" LowerBound="41.23" HigherBound="41.47">
+                        <om:Property Name="Ref" Value="bulk_payment_out_message" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="ef9ee4f8-159a-49d5-acdc-0ce10d137ece" ParentLink="ServiceBody_Statement" LowerBound="46.1" HigherBound="50.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Group_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Send" OID="9aa0a94a-bc4a-47c9-be77-094d368ecc9d" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
+                        <om:Property Name="PortName" Value="bulk_payment_out_file_port" />
+                        <om:Property Name="MessageName" Value="bulk_payment_out_message" />
+                        <om:Property Name="OperationName" Value="Operation_1" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="send to processed" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Send" OID="36901770-964e-4af6-8f6e-bd8a57356e57" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="50.1">
+                        <om:Property Name="PortName" Value="bulk_payment_out_ftp_port" />
+                        <om:Property Name="MessageName" Value="bulk_payment_out_message" />
+                        <om:Property Name="OperationName" Value="Operation_1" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="send to ftp" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="50dbc0e6-52cb-4616-999a-1f81a35cd2d4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGuard.PortType_bulk_payment_in" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_in_port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="49b13735-9f75-4da9-bd05-30cdc85b0c7b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\softrite\PayGuard\in\bulk_payments\*.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="7f4e6b1c-2280-479a-b121-9a4690dfa7dc" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGuard.PortType_bulk_payment_out" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_out_file_port" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="259866ef-936d-4106-a19f-4b9bfc314e06" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\softrite\PayGuard\out\bulk_payments\bulk_payments_%datetime%_%MessageID%.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c0457ad8-da73-4d23-850e-6455afae88c0" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGuard.bulk_payment_out_ftp_port_" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_out_ftp_port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="82ebd256-87b5-4521-92ab-44b68b381a8c" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ab835702-10c9-40e7-905e-2596efc33a52" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="PayGuard.Schemas.bulk_payment_in" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_in_message" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="91a2cf85-4174-4d2e-8952-049ee0ebce1c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="PayGuard.Schemas.bulk_payment_out" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_out_message" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PayGuard
+{
+    internal porttype PortType_bulk_payment_in
+    {
+        oneway Operation_1
+        {
+            Schemas.bulk_payment_in
+        };
+    };
+    internal porttype PortType_bulk_payment_out
+    {
+        oneway Operation_1
+        {
+            Schemas.bulk_payment_out
+        };
+    };
+    internal porttype bulk_payment_out_ftp_port_
+    {
+        oneway Operation_1
+        {
+            Schemas.bulk_payment_out
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service bulk_payment_orchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\softrite\\PayGuard\\in\\bulk_payments\\*.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLReceive))]
+        port implements PortType_bulk_payment_in bulk_payment_in_port;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\softrite\\PayGuard\\out\\bulk_payments\\bulk_payments_%datetime%_%MessageID%.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses PortType_bulk_payment_out bulk_payment_out_file_port;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses bulk_payment_out_ftp_port_ bulk_payment_out_ftp_port;
+        message Schemas.bulk_payment_in bulk_payment_in_message;
+        message Schemas.bulk_payment_out bulk_payment_out_message;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("df7584fa-0c79-461e-9b07-7c14f3d1e0f3")]
+            activate receive (bulk_payment_in_port.Operation_1, bulk_payment_in_message);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ff83a799-a180-44a1-a849-0decb6ca6ae3")]
+            construct bulk_payment_out_message
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("09a447a0-784e-4fef-8ccf-b64463faafba")]
+                transform (bulk_payment_out_message) = PayGuard.Maps.bulk_payment_map (bulk_payment_in_message);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9aa0a94a-bc4a-47c9-be77-094d368ecc9d")]
+            send (bulk_payment_out_file_port.Operation_1, bulk_payment_out_message);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("36901770-964e-4af6-8f6e-bd8a57356e57")]
+            send (bulk_payment_out_ftp_port.Operation_1, bulk_payment_out_message);
+        }
+    }
+}
+

@@ -1,0 +1,4 @@
+C:\Users\Softrite\documents\visual studio 2015\Projects\PayGuard\PayGuard\bin\Debug\PayGuard.dll
+C:\Users\Softrite\documents\visual studio 2015\Projects\PayGuard\PayGuard\bin\Debug\PayGuard.pdb
+C:\Users\Softrite\documents\visual studio 2015\Projects\PayGuard\PayGuard\obj\Debug\PayGuard.dll
+C:\Users\Softrite\documents\visual studio 2015\Projects\PayGuard\PayGuard\obj\Debug\PayGuard.pdb
