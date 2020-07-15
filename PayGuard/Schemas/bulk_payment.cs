@@ -6,18 +6,18 @@ namespace PayGuard.Schemas {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
-    [Schema(@"https://softrite.co.zw/PayGuard.Schemas.bulk_payment_out",@"bulk_payment_out")]
+    [Schema(@"https://softrite.co.zw/PayGuard.Schemas.bulk_payment_in",@"bulk_payment_in")]
     [System.SerializableAttribute()]
-    [SchemaRoots(new string[] {@"bulk_payment_out"})]
-    public sealed class bulk_payment_out : Microsoft.XLANGs.BaseTypes.SchemaBase {
+    [SchemaRoots(new string[] {@"bulk_payment_in"})]
+    public sealed class bulk_payment_in : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
         private static object _rawSchema;
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns=""https://softrite.co.zw/PayGuard.Schemas.bulk_payment_out"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""https://softrite.co.zw/PayGuard.Schemas.bulk_payment_out"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
-  <xs:element name=""bulk_payment_out"">
+<xs:schema xmlns=""https://softrite.co.zw/PayGuard.Schemas.bulk_payment_in"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""https://softrite.co.zw/PayGuard.Schemas.bulk_payment_in"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+  <xs:element name=""bulk_payment_in"">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs=""1"" name=""date_time_submitted"" type=""xs:dateTime"" />
@@ -42,7 +42,7 @@ namespace PayGuard.Schemas {
   </xs:element>
 </xs:schema>";
         
-        public bulk_payment_out() {
+        public bulk_payment_in() {
         }
         
         public override string XmlContent {
@@ -54,7 +54,7 @@ namespace PayGuard.Schemas {
         public override string[] RootNodes {
             get {
                 string[] _RootElements = new string [1];
-                _RootElements[0] = "bulk_payment_out";
+                _RootElements[0] = "bulk_payment_in";
                 return _RootElements;
             }
         }

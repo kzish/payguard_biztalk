@@ -1,0 +1,361 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="c0a849ff-8bed-4c31-a6e4-8d2e2c4ecc8f">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PayGuard.WebServices" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="eb78a0a1-0a02-46e1-ba93-deb64277e1cc" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;WebServiceSoap&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="WebServiceSoap" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="41f568c7-5048-49dd-9662-44cc81f80c4c" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;RBZDebitBankGrossAccount&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="RBZDebitBankGrossAccount" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="7cf938e6-0e1f-4e36-b1bb-6b1d779574c0" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.RBZDebitBankGrossAccountSoapIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:RBZDebitBankGrossAccountSoapIn&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e6d1f550-9ed8-4692-bfa7-a80661eb2a6c" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.RBZDebitBankGrossAccountSoapOut" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:RBZDebitBankGrossAccountSoapOut&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="ceedfb7d-6ca0-44ad-b961-2563ca20a3c8" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;RBZCreditBankGrossAccount&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="RBZCreditBankGrossAccount" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="3bebd5c0-1615-4dae-b05b-b7d8e88638d4" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.RBZCreditBankGrossAccountSoapIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:RBZCreditBankGrossAccountSoapIn&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="bcd8da21-00e7-49fd-9148-69b6692acf2a" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.RBZCreditBankGrossAccountSoapOut" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:RBZCreditBankGrossAccountSoapOut&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="32f69e60-0209-46ce-9e27-c59ec2327d5d" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;CheckAccountBalance&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="CheckAccountBalance" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a2f5a7a4-05b8-4a78-8c5d-d088e6d5a765" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.CheckAccountBalanceSoapIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:CheckAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="27502f83-c663-4f38-8230-76529e83a4de" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.CheckAccountBalanceSoapOut" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:CheckAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="da0287f4-ee30-4e9f-b3ad-a9d88d702e3c" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;DebitAccountBalance&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="DebitAccountBalance" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="98b72230-61b0-4dda-ab7e-2bb560864c3c" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.DebitAccountBalanceSoapIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:DebitAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="bf2a1eeb-81ba-41de-a289-36005af0f4ab" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.DebitAccountBalanceSoapOut" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:DebitAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="8137c180-dc9f-4eb7-86f8-a4916a2904e0" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;CreditAccountBalance&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="CreditAccountBalance" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="3e435193-25ae-494a-a569-8813dac53121" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.CreditAccountBalanceSoapIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:CreditAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="8e8b1c35-a827-498f-95a9-b9a81550129f" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="PayGuard.WebServices.CreditAccountBalanceSoapOut" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:CreditAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="3dbccf00-f675-4768-a2ee-b8c8a9381150" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;RBZDebitBankGrossAccountSoapIn&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="RBZDebitBankGrossAccountSoapIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="f703d289-3110-41df-be7e-43240ff9622b" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.RBZDebitBankGrossAccount" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="441bb421-5447-4edf-9ef6-c193d27df529" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;RBZDebitBankGrossAccountSoapOut&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="RBZDebitBankGrossAccountSoapOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="788fc001-00c4-49ac-aa1a-0eb3930e3ec8" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.RBZDebitBankGrossAccountResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="df9b6d82-15d5-45b2-ae93-7c7fcd3be17c" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;RBZCreditBankGrossAccountSoapIn&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="RBZCreditBankGrossAccountSoapIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="f9e83177-ade2-4aa2-930e-5cd66bd89a3e" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.RBZCreditBankGrossAccount" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="0a1070ef-56c9-4fff-b377-88f42223ed36" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;RBZCreditBankGrossAccountSoapOut&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="RBZCreditBankGrossAccountSoapOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="ef42649c-dd56-4132-aae7-166f5b4b5d14" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.RBZCreditBankGrossAccountResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="2ef61659-96b1-46f7-9fdc-dcec17cec5db" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CheckAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="CheckAccountBalanceSoapIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="dc0cde17-85fd-4b1b-97eb-baa68e6e1da3" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.CheckAccountBalance" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="b8720b15-e9c4-4d1b-b796-e1772028a040" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CheckAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="CheckAccountBalanceSoapOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="4f9bea2a-976c-4e2b-a02b-f81fb9b90de8" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.CheckAccountBalanceResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="80312249-79f2-4537-aba4-949c88ba4880" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;DebitAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DebitAccountBalanceSoapIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="35485f83-3152-423b-83ee-c64d04df8cbb" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.DebitAccountBalance" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="4f468667-d018-4be3-b6f9-273a91c3d090" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;DebitAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DebitAccountBalanceSoapOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="8a9b90e1-5c33-44cf-8d22-e161874562f1" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.DebitAccountBalanceResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="a7d85eae-6e5f-4a76-97fe-1386893bc181" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CreditAccountBalanceSoapIn&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="CreditAccountBalanceSoapIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="e03a11d8-1847-4b2e-b5e3-f734cca0628d" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.CreditAccountBalance" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="b4ac90e6-5867-466d-9b3c-c191b89aa8bc" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;CreditAccountBalanceSoapOut&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="CreditAccountBalanceSoapOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="34584117-ea1e-4af8-bf01-5777453b45ab" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="PayGuard.WebServices.WebService_tempuri_org.CreditAccountBalanceResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="f0a6bc5e-d58b-41f0-8247-1b555189809b" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;WebService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="WebServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="11dc96a3-44bd-4606-bb73-4d3c1b10dbac" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PayGuard.WebServices
+{
+    internal messagetype RBZDebitBankGrossAccountSoapIn
+    {
+        body WebService_tempuri_org.RBZDebitBankGrossAccount parameters;
+    };
+    internal messagetype RBZDebitBankGrossAccountSoapOut
+    {
+        body WebService_tempuri_org.RBZDebitBankGrossAccountResponse parameters;
+    };
+    internal messagetype RBZCreditBankGrossAccountSoapIn
+    {
+        body WebService_tempuri_org.RBZCreditBankGrossAccount parameters;
+    };
+    internal messagetype RBZCreditBankGrossAccountSoapOut
+    {
+        body WebService_tempuri_org.RBZCreditBankGrossAccountResponse parameters;
+    };
+    internal messagetype CheckAccountBalanceSoapIn
+    {
+        body WebService_tempuri_org.CheckAccountBalance parameters;
+    };
+    internal messagetype CheckAccountBalanceSoapOut
+    {
+        body WebService_tempuri_org.CheckAccountBalanceResponse parameters;
+    };
+    internal messagetype DebitAccountBalanceSoapIn
+    {
+        body WebService_tempuri_org.DebitAccountBalance parameters;
+    };
+    internal messagetype DebitAccountBalanceSoapOut
+    {
+        body WebService_tempuri_org.DebitAccountBalanceResponse parameters;
+    };
+    internal messagetype CreditAccountBalanceSoapIn
+    {
+        body WebService_tempuri_org.CreditAccountBalance parameters;
+    };
+    internal messagetype CreditAccountBalanceSoapOut
+    {
+        body WebService_tempuri_org.CreditAccountBalanceResponse parameters;
+    };
+    internal porttype WebServiceSoap
+    {
+        requestresponse RBZDebitBankGrossAccount
+        {
+            RBZDebitBankGrossAccountSoapIn, RBZDebitBankGrossAccountSoapOut
+        };
+        requestresponse RBZCreditBankGrossAccount
+        {
+            RBZCreditBankGrossAccountSoapIn, RBZCreditBankGrossAccountSoapOut
+        };
+        requestresponse CheckAccountBalance
+        {
+            CheckAccountBalanceSoapIn, CheckAccountBalanceSoapOut
+        };
+        requestresponse DebitAccountBalance
+        {
+            DebitAccountBalanceSoapIn, DebitAccountBalanceSoapOut
+        };
+        requestresponse CreditAccountBalance
+        {
+            CreditAccountBalanceSoapIn, CreditAccountBalanceSoapOut
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service WebServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

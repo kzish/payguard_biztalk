@@ -4,12 +4,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1C8917A4-951C-40B2-A240-58C2C548CC4C}</ProjectGuid>
+    <ProjectGuid>{4AD00A4B-B409-4C22-B6B3-926E8B6E2F7A}</ProjectGuid>
     <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>library</OutputType>
     <GenericProcessing>true</GenericProcessing>
-    <RootNamespace>PayGuard</RootNamespace>
-    <AssemblyName>PayGuard</AssemblyName>
+    <RootNamespace>PayGaurdRBZ</RootNamespace>
+    <AssemblyName>PayGaurdRBZ</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
   </PropertyGroup>
@@ -31,12 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>payguard_bulk_payments_strong_name_key_pass_123abc.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -73,48 +67,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="Orchestrations\bulk_payment_orchestration.odx">
-      <TypeName>bulk_payment_orchestration</TypeName>
-      <Namespace>PayGuard</Namespace>
-      <SubType>Task</SubType>
-    </XLang>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="payguard_bulk_payments_strong_name_key_pass_123abc.pfx" />
     <Schema Include="Schemas\bulk_payment.xsd">
       <SubType>Task</SubType>
-      <TypeName>bulk_payment</TypeName>
-      <Namespace>PayGuard.Schemas</Namespace>
-    </Schema>
-    <Schema Include="WebServices\WebService_tempuri_org.xsd">
-      <Namespace>PayGuard.WebServices</Namespace>
-      <TypeName>WebService_tempuri_org</TypeName>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="Schemas\payment_instructions.xsd">
-      <TypeName>payment_instructions</TypeName>
-      <Namespace>PayGuard.Schemas</Namespace>
-      <SubType>Task</SubType>
+      <TypeName>bulk_payment_in</TypeName>
+      <Namespace>PayGaurdRBZ.Schemas</Namespace>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="Orchestrations\payment_instructions_orchestration.odx">
-      <TypeName>payment_instructions_rchestration</TypeName>
-      <Namespace>PayGuard.Orchestrations</Namespace>
-      <SubType>Task</SubType>
-    </XLang>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="WebServices\WebService.BindingInfo.xml" />
-    <XLang Include="WebServices\WebService.odx">
-      <TypeName>WebService</TypeName>
-      <Namespace>PayGuard.WebServices</Namespace>
-      <SubType>Task</SubType>
-    </XLang>
-    <Content Include="WebServices\WebService_Custom.BindingInfo.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="Database\" />
     <Folder Include="Maps\" />
+    <Folder Include="PeragoRtgsWebservices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orchestrations\bulk_payment_orchestration_rbz.odx">
+      <TypeName>bulk_payment_orchestration</TypeName>
+      <Namespace>PayGaurdRBZ.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schemas\payment_instructions.xsd">
+      <SubType>Task</SubType>
+      <TypeName>payment_instructions</TypeName>
+      <Namespace>PayGaurdRBZ.Schemas</Namespace>
+    </Schema>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

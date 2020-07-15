@@ -1,0 +1,221 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="821f23c8-663d-4cb9-917d-a6ca846f2855" LowerBound="1.1" HigherBound="41.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PayGaurdRBZ" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="64223518-b3da-4ce5-9b74-d7147c364b1c" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="bulk_payment_in_rbz" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3a0d2d15-d83f-4c75-b4ce-b1287618b472" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="fae5a37f-cace-4de7-9c21-f3c6a6d9ff34" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="PayGaurdRBZ.Schemas.bulk_payment_in" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9e5006a3-590e-4215-a8b5-06c37dc89f95" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="bulk_payment_out_rbz_" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3ebe6b1d-1eb2-4404-b84c-4eaeb4c9281e" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="1c462ee1-3553-46db-ab25-a5129d7ae136" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.36">
+                    <om:Property Name="Ref" Value="PayGaurdRBZ.Schemas.bulk_payment_in" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="dfe0cd03-0c59-4b4d-8560-df65ebbb6026" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="20.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b35d6f92-45b8-4d83-9634-84bb1125bb74" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="afaeb530-7064-4cbe-8817-00dfa6fc57ce" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="7ad21e06-fd92-49c1-a7b5-43fc90bca1b8" ParentLink="Module_PortType" LowerBound="20.1" HigherBound="22.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="payment_instructionsout_rbz_file" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3137be24-ba8f-499c-87e2-c6f62a1431e9" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="8f6a693c-5f13-45b6-a19a-30ee8ce098db" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a69acb06-89e3-4096-bcb0-8eaddc3bb4cf" ParentLink="Module_ServiceDeclaration" LowerBound="22.1" HigherBound="40.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="bulk_payment_orchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="887dc838-d746-4bab-895f-8b152cca31e8" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="e533ae4c-f3ac-403a-920e-cc039e5b0f41" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="36.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="bulk_payment_in" />
+                    <om:Property Name="MessageName" Value="bulk_payment" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="0fd62bcd-59d7-43e9-8bb6-639443ea525e" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="38.1">
+                    <om:Property Name="PortName" Value="bulk_payment_out_rbz" />
+                    <om:Property Name="MessageName" Value="bulk_payment" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="cde22887-6f5e-4556-8acd-2af973e87123" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="25.1" HigherBound="27.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGaurdRBZ.bulk_payment_in_rbz" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_in" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="2af499a9-7405-4810-8fb9-06a4d199bf6e" ParentLink="PortDeclaration_CLRAttribute" LowerBound="25.1" HigherBound="26.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\softrite\PayGuard\in\bulk_payments_rbz\*.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e7b6ec2f-14bb-4067-8f7a-65750e485058" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="27.1" HigherBound="29.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGaurdRBZ.bulk_payment_out_rbz_" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment_out_rbz" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="3f06bae8-bac6-49bd-9c23-2b6cdac43850" ParentLink="PortDeclaration_CLRAttribute" LowerBound="27.1" HigherBound="28.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\softrite\PayGuard\out\bulk_payments_rbz\bulk_payment_%datetime%_%MessageID%" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="a5896ef2-48df-47be-96e7-8b2fa9d1cbfa" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="29.1" HigherBound="31.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="9" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PayGaurdRBZ.payment_instructionsout_rbz_file" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ftp_rbz_payment_instructions_out" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="126a298c-b711-4071-b4d2-e062bb158e48" ParentLink="PortDeclaration_CLRAttribute" LowerBound="29.1" HigherBound="30.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="bed5385c-e8fb-44f4-a4e2-e73bb2b28ce6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="Type" Value="PayGaurdRBZ.Schemas.bulk_payment_in" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="bulk_payment" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PayGaurdRBZ
+{
+    internal porttype bulk_payment_in_rbz
+    {
+        oneway Operation_1
+        {
+            Schemas.bulk_payment_in
+        };
+    };
+    internal porttype bulk_payment_out_rbz_
+    {
+        oneway Operation_1
+        {
+            Schemas.bulk_payment_in
+        };
+    };
+
+#error "Errors exist for one or more children."
+
+#error "Errors exist for one or more children."
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service bulk_payment_orchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\softrite\\PayGuard\\in\\bulk_payments_rbz\\*.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLReceive))]
+        port implements bulk_payment_in_rbz bulk_payment_in;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\softrite\\PayGuard\\out\\bulk_payments_rbz\\bulk_payment_%datetime%_%MessageID%", typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses bulk_payment_out_rbz_ bulk_payment_out_rbz;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements payment_instructionsout_rbz_file ftp_rbz_payment_instructions_out;
+        message Schemas.bulk_payment_in bulk_payment;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e533ae4c-f3ac-403a-920e-cc039e5b0f41")]
+            receive (bulk_payment_in.Operation_1, bulk_payment);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0fd62bcd-59d7-43e9-8bb6-639443ea525e")]
+            send (bulk_payment_out_rbz.Operation_1, bulk_payment);
+        }
+    }
+}
+
